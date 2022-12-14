@@ -1,0 +1,7 @@
+*.html
+*.pdf
+*_files/
+
+*.Rproj.user
+*.docx
+*.pdf
