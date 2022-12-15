@@ -1,16 +1,3 @@
--- from @kapsnelz
-
--- [import]
-local local_deps = require "utils"
-local normalize_affiliations = local_deps.normalize_affiliations
-local normalize_authors = local_deps.normalize_authors
-local create_authors = local_deps.create_authors
-local resolve_institutes = local_deps.resolve_institutes
-local has_key = local_deps.has_key
--- [/import]
-
-
-
 -- https://github.com/pandoc/lua-filters/commit/ca72210b453cc0d045360e0ae36448d019d7dfbf
 --[[
 affiliation-blocks – generate title components
@@ -29,6 +16,16 @@ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 ]]
+
+-- from @kapsnelz
+-- [import]
+local local_deps = require "utils"
+local normalize_affiliations = local_deps.normalize_affiliations
+local normalize_authors = local_deps.normalize_authors
+local create_authors = local_deps.create_authors
+local resolve_institutes = local_deps.resolve_institutes
+local has_key = local_deps.has_key
+-- [/import]
 
 -- taken from https://github.com/pandoc/lua-filters/blob/1660794b991c3553968beb993f5aabb99b317584/author-info-blocks/author-info-blocks.lua
 local List = require 'pandoc.List'

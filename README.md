@@ -1,13 +1,13 @@
-# Author-block Extension For Quarto
+# Authors-block Extension For Quarto
 
-_TODO_: Add a short description of your extension.
+This extension brings the capability to add author-related header blocks when rendering docx-Documents with Quarto.
+
+The extension adds some modifications to the code originally provided with the lua-filters [scholarly-metadata](https://github.com/pandoc/lua-filters/tree/master/scholarly-metadata) (by Albert Krewinkel and Robert Winkler) and [æuthor-info-block](https://github.com/pandoc/lua-filters/tree/master/author-info-blocks) (by Albert Krewinkel) in order to make it compatible with Quarto and its [normalized author-block](https://quarto.org/docs/journals/authors.html).  
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
 ```bash
-quarto add <github-organization>/author-block
+quarto add kapsner/authors-block
 ```
 
 This will install the extension under the `_extensions` subdirectory.
@@ -15,9 +15,48 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-_TODO_: Describe how to use your extension.
+<br>
+<img src="example.png" align="center" width=100% />
+<br>
 
 ## Example
 
 Here is the source code for a minimal example: [example.qmd](example.qmd).
 
+```yml
+---
+title: "Authors-block Example"
+
+authors:
+  - name: John Doe
+    affiliations:
+      - ref: jdct
+    corresponding: true
+    email: john.doe@jdct.edu
+    orcid: 0000-1111-2222-3333
+    equal-contributor: true
+  - name: John Roe
+    affiliations:
+      - ref: jdct
+    orcid: 0000-3333-2222-1111
+  - name: Jane Roe
+    affiliations:
+      - ref: jdct
+      - ref: iot
+    orcid: 0000-2222-1111-3333
+    equal-contributor: true
+
+affiliations:
+  - id: jdct
+    name: John Doe Center for Technology, John Doe University, Doetown, Germany.
+  - id: iot
+    name: Institute of Technology, John Doe University, Doetown, Germany.
+
+filters:
+  - authors-block
+
+format:
+  docx: default
+  pdf: default
+---
+```

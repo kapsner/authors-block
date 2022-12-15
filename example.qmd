@@ -1,5 +1,5 @@
 ---
-title: "Author-block Example"
+title: "Authors-block Example"
 
 authors:
   - name: John Doe
@@ -27,7 +27,7 @@ affiliations:
     name: Institute of Technology, John Doe University, Doetown, Germany.
 
 filters:
-  - author-block
+  - authors-block
 
 format:
   #native: default

@@ -1,3 +1,18 @@
+/*
+/*/*
+
+!.gitignore
+!/_extensions/
+!/_extensions/authors-block/
+
+
+!*.lua
+!*.yml
+!*.rproj
+!/example.qmd
+!/README.md
+!/example.png
+
 *.html
 *.pdf
 *_files/
@@ -5,3 +20,4 @@
 *.Rproj.user
 *.docx
 *.pdf
+.Rproj.user
