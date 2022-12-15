@@ -11,6 +11,7 @@
 !*.rproj
 !/example.qmd
 !/README.md
+!/NEWS.md
 !/example.png
 
 *.html
