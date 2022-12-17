@@ -1,5 +1,9 @@
 # Authors-block Extension For Quarto
 
+<!-- badges: start -->
+[![R build status](https://github.com/kapsner/authors-block/workflows/tests/badge.svg?branch=main)](https://github.com/kapsner/authors-block/actions)
+<!-- badges: end -->
+
 This extension brings the capability to add author-related header blocks when rendering docx-Documents with Quarto.
 
 The extension adds some modifications to the code originally provided with the lua-filters [scholarly-metadata](https://github.com/pandoc/lua-filters/tree/master/scholarly-metadata) (by Albert Krewinkel and Robert Winkler) and [author-info-block](https://github.com/pandoc/lua-filters/tree/master/author-info-blocks) (by Albert Krewinkel) in order to make it compatible with Quarto and its [normalized author-block](https://quarto.org/docs/journals/authors.html).  

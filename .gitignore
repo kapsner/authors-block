@@ -2,6 +2,8 @@
 /*/*
 
 !.gitignore
+!/.github/
+!/.github/workflows/
 !/_extensions/
 !/_extensions/authors-block/
 
@@ -17,6 +19,7 @@
 !*.yml
 !*.rproj
 !/example.qmd
+!/devstuffs.R
 !/README.md
 !/NEWS.md
 !/example.png

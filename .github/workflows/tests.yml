@@ -1,0 +1,109 @@
+on:
+  push:
+  pull_request:
+  # for now, CRON jobs only run on the default branch of the repo (i.e. usually on master)
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "0 4 * * *"
+
+name: test-coverage
+
+jobs:
+  all:
+    runs-on: ${{ matrix.config.os }}
+
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          # use a different tic template type if you do not want to build on all listed platforms
+          #- { os: windows-latest, r: "release", java: "true" }
+          #- { os: macOS-latest, r: "release", java: "true" }
+          - { os: ubuntu-latest, r: "release", java: "false" }
+
+    env:
+      # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      CRAN: ${{ matrix.config.cran }}
+      # we are not allowed to write to ~/.ccache on GH Actions
+      # setting some ccache options
+      CCACHE_BASEDIR: ${{ GITHUB.WORKSPACE }}
+      CCACHE_DIR: ${{ GITHUB.WORKSPACE }}/.ccache
+      CCACHE_NOHASHDIR: true
+      CCACHE_SLOPPINESS: include_file_ctime
+      # prevent rgl issues because no X11 display is available
+      RGL_USE_NULL: true
+      # if you use bookdown or blogdown, replace "PKGDOWN" by the respective
+      # capitalized term. This also might need to be done in tic.R
+      BUILD_PKGDOWN: ${{ matrix.config.pkgdown }}
+      # macOS >= 10.15.4 linking
+      SDKROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+      # use GITHUB_TOKEN from GitHub to workaround rate limits in {remotes}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ matrix.config.r }}
+          Ncpus: 4
+
+      # LaTeX. Installation time:
+      # Linux: ~ 1 min
+      # macOS: ~ 1 min 30s
+      # Windows: never finishes
+      - uses: r-lib/actions/setup-tinytex@v2
+        if: matrix.config.latex == 'true'
+        env:
+          # install full prebuilt version
+          TINYTEX_INSTALLER: TinyTeX
+
+      - uses: r-lib/actions/setup-pandoc@v2
+        if: matrix.config.latex == 'true'
+
+      - uses: actions/setup-java@v1
+        if: matrix.config.java == 'true'
+        with:
+          java-version: '8'
+
+      # set date/week for use in cache creation
+      # https://github.community/t5/GitHub-Actions/How-to-set-and-access-a-Workflow-variable/m-p/42970
+      # - cache R packages daily
+      - name: "[Cache] Prepare daily timestamp for cache"
+        if: runner.os != 'Windows'
+        id: date
+        run: echo "::set-output name=date::$(date '+%d-%m')"
+
+      - name: "[Cache] Cache R packages"
+        if: runner.os != 'Windows'
+        uses: pat-s/always-upload-cache@main
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ matrix.config.r }}-${{steps.date.outputs.date}}
+          restore-keys: ${{ runner.os }}-r-${{ matrix.config.r }}-${{steps.date.outputs.date}}
+
+      # for some strange Windows reason this step and the next one need to be decoupled
+      - name: "[Stage] Prepare"
+        run: |
+          Rscript -e "if (!requireNamespace('remotes')) install.packages('remotes', type = 'source')"
+          Rscript -e "if (getRversion() < '3.2' && !requireNamespace('curl')) install.packages('curl', type = 'source')"
+
+      - name: "[Stage] [Linux] Install curl"
+        if: runner.os == 'Linux'
+        run: sudo apt install libcurl4-openssl-dev
+
+      - name: "[Stage] Configure R Java"
+        if: runner.os != 'Windows' && matrix.config.java == 'true'
+        run: "echo export PATH=$PATH > reconf.sh; echo export JAVA_HOME=$JAVA_HOME >> reconf.sh; echo R CMD javareconf >> reconf.sh; sudo bash reconf.sh"
+
+      - name: Install dependencies
+        run: |
+          install.packages(c("testthat"))
+        shell: Rscript {0}
+
+      - name: Test
+        run: testthat::test_dir(path = "tests/testthat")
+        shell: Rscript {0}
