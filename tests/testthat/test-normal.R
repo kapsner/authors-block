@@ -43,7 +43,7 @@ format:
     '
     fn_in <- file.path(tempdir(), "test.qmd")
     fn_out <- file.path(tempdir(), "test.native")
-    writeLines(text = yml_header, con = fn_out)
+    writeLines(text = yml_header, con = fn_in)
     quarto::quarto_render(
       input = fn_in,
       output_format = "native"
