@@ -19,9 +19,9 @@ jobs:
       matrix:
         config:
           # use a different tic template type if you do not want to build on all listed platforms
-          #- { os: windows-latest, r: "release", java: "true" }
-          #- { os: macOS-latest, r: "release", java: "true" }
-          - { os: ubuntu-latest, r: "release", java: "false" }
+          - { os: windows-latest, r: "release" }
+          - { os: macOS-latest, r: "release" }
+          - { os: ubuntu-latest, r: "release" }
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
@@ -79,10 +79,6 @@ jobs:
       - name: "[Stage] [Linux] Install curl"
         if: runner.os == 'Linux'
         run: sudo apt install libcurl4-openssl-dev
-
-      - name: "[Stage] Configure R Java"
-        if: runner.os != 'Windows' && matrix.config.java == 'true'
-        run: "echo export PATH=$PATH > reconf.sh; echo export JAVA_HOME=$JAVA_HOME >> reconf.sh; echo R CMD javareconf >> reconf.sh; sudo bash reconf.sh"
 
       - name: Install dependencies
         run: |
