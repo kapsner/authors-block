@@ -1,0 +1,745 @@
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "affiliations"
+            , MetaList
+                [ MetaMap
+                    (fromList
+                       [ ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaInlines
+                             [ Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "Center"
+                             , Space
+                             , Str "for"
+                             , Space
+                             , Str "Technology,"
+                             , Space
+                             , Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "University,"
+                             , Space
+                             , Str "Doetown,"
+                             , Space
+                             , Str "Germany."
+                             ]
+                         )
+                       , ( "number" , MetaString "1" )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaInlines
+                             [ Str "Institute"
+                             , Space
+                             , Str "of"
+                             , Space
+                             , Str "Technology,"
+                             , Space
+                             , Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "University,"
+                             , Space
+                             , Str "Doetown,"
+                             , Space
+                             , Str "Germany."
+                             ]
+                         )
+                       , ( "number" , MetaString "2" )
+                       ])
+                ]
+            )
+          , ( "authors"
+            , MetaList
+                [ MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "attributes"
+                         , MetaMap
+                             (fromList
+                                [ ( "corresponding"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                , ( "equal-contributor"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                ])
+                         )
+                       , ( "email"
+                         , MetaInlines [ Str "john.doe@jdct.edu" ]
+                         )
+                       , ( "id" , MetaString "1" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Doe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "John" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "John" , Space , Str "Doe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "1" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-1111-2222-3333" ]
+                         )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaString "2" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "John" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "John" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "2" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-3333-2222-1111" ]
+                         )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "iot" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "attributes"
+                         , MetaMap
+                             (fromList
+                                [ ( "equal-contributor"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                ])
+                         )
+                       , ( "id" , MetaString "3" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "Jane" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "Jane" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "3" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-2222-1111-3333" ]
+                         )
+                       ])
+                ]
+            )
+          , ( "biblio-config" , MetaBool True )
+          , ( "by-affiliation"
+            , MetaList
+                [ MetaMap
+                    (fromList
+                       [ ( "authors"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "attributes"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "corresponding"
+                                               , MetaInlines
+                                                   [ Str "true" ]
+                                               )
+                                             , ( "equal-contributor"
+                                               , MetaInlines
+                                                   [ Str "true" ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "email"
+                                      , MetaInlines
+                                          [ Str "john.doe@jdct.edu" ]
+                                      )
+                                    , ( "id" , MetaString "1" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Doe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "John" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "John"
+                                                   , Space
+                                                   , Str "Doe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "1" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-1111-2222-3333" ]
+                                      )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "id" , MetaString "2" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Roe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "John" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "John"
+                                                   , Space
+                                                   , Str "Roe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "2" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-3333-2222-1111" ]
+                                      )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          , MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "iot" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "attributes"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "equal-contributor"
+                                               , MetaInlines
+                                                   [ Str "true" ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "id" , MetaString "3" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Roe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "Jane" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "Jane"
+                                                   , Space
+                                                   , Str "Roe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "3" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-2222-1111-3333" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaInlines
+                             [ Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "Center"
+                             , Space
+                             , Str "for"
+                             , Space
+                             , Str "Technology,"
+                             , Space
+                             , Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "University,"
+                             , Space
+                             , Str "Doetown,"
+                             , Space
+                             , Str "Germany."
+                             ]
+                         )
+                       , ( "number" , MetaString "1" )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "authors"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          , MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "iot" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "attributes"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "equal-contributor"
+                                               , MetaInlines
+                                                   [ Str "true" ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "id" , MetaString "3" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Roe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "Jane" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "Jane"
+                                                   , Space
+                                                   , Str "Roe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "3" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-2222-1111-3333" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaInlines
+                             [ Str "Institute"
+                             , Space
+                             , Str "of"
+                             , Space
+                             , Str "Technology,"
+                             , Space
+                             , Str "John"
+                             , Space
+                             , Str "Doe"
+                             , Space
+                             , Str "University,"
+                             , Space
+                             , Str "Doetown,"
+                             , Space
+                             , Str "Germany."
+                             ]
+                         )
+                       , ( "number" , MetaString "2" )
+                       ])
+                ]
+            )
+          , ( "by-author"
+            , MetaList
+                [ MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "Center"
+                                          , Space
+                                          , Str "for"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "1" )
+                                    ])
+                             ]
+                         )
+                       , ( "attributes"
+                         , MetaMap
+                             (fromList
+                                [ ( "corresponding"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                , ( "equal-contributor"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                ])
+                         )
+                       , ( "email"
+                         , MetaInlines [ Str "john.doe@jdct.edu" ]
+                         )
+                       , ( "id" , MetaString "1" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Doe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "John" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "John" , Space , Str "Doe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "1" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-1111-2222-3333" ]
+                         )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "Center"
+                                          , Space
+                                          , Str "for"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "1" )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaString "2" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "John" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "John" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "2" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-3333-2222-1111" ]
+                         )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "Center"
+                                          , Space
+                                          , Str "for"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "1" )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "iot" ]
+                                      )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "Institute"
+                                          , Space
+                                          , Str "of"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "2" )
+                                    ])
+                             ]
+                         )
+                       , ( "attributes"
+                         , MetaMap
+                             (fromList
+                                [ ( "equal-contributor"
+                                  , MetaInlines [ Str "true" ]
+                                  )
+                                ])
+                         )
+                       , ( "id" , MetaString "3" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "Jane" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "Jane" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "3" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-2222-1111-3333" ]
+                         )
+                       ])
+                ]
+            )
+          , ( "labels"
+            , MetaMap
+                (fromList
+                   [ ( "abstract" , MetaInlines [ Str "Abstract" ] )
+                   , ( "affiliations"
+                     , MetaInlines [ Str "Affiliations" ]
+                     )
+                   , ( "authors" , MetaInlines [ Str "Authors" ] )
+                   , ( "description"
+                     , MetaInlines [ Str "Description" ]
+                     )
+                   , ( "doi" , MetaInlines [ Str "Doi" ] )
+                   , ( "modified" , MetaInlines [ Str "Modified" ] )
+                   , ( "published" , MetaInlines [ Str "Published" ] )
+                   ])
+            )
+          , ( "title"
+            , MetaInlines
+                [ Str "Authors-block" , Space , Str "Example" ]
+            )
+          ]
+    }
+  []

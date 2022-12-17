@@ -5,6 +5,13 @@
 !/_extensions/
 !/_extensions/authors-block/
 
+!/tests/
+!/tests/*.R
+!/tests/testthat/
+!/tests/testthat/*.R
+!/tests/testthat/_snaps/
+!/tests/testthat/_snaps/*
+
 
 !*.lua
 !*.yml
