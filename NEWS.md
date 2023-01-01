@@ -1,6 +1,6 @@
 # Authors-block NEWS
 
-## Unreleased (2022-12-17)
+## Unreleased (2023-01-01)
 
 #### Refactorings
 
@@ -29,6 +29,10 @@
 
 #### Other changes
 
+-   added mit license, updated copyright statements
+    ([9c77a5e](https://github.com/kapsner/authors-block/tree/9c77a5e6a5e557894d7e7ede2b9c8b03e3bca918))
+-   udpated news.md
+    ([63fb52c](https://github.com/kapsner/authors-block/tree/63fb52cd3b26af56c7e634669af44e391d72686e))
 -   updated news.md
     ([fd007b8](https://github.com/kapsner/authors-block/tree/fd007b8d7d9ec872beb0589bc551e5eb0763dee0))
 -   renamed test-name
@@ -41,7 +45,7 @@
     ([997e605](https://github.com/kapsner/authors-block/tree/997e605ecea203fb391de1684147fbfa5fa1944c))
 
 Full set of changes:
-[`v0.1.0...63b8b34`](https://github.com/kapsner/authors-block/compare/v0.1.0...63b8b34)
+[`v0.1.0...9c77a5e`](https://github.com/kapsner/authors-block/compare/v0.1.0...9c77a5e)
 
 ## v0.1.0 (2022-12-15)
 
