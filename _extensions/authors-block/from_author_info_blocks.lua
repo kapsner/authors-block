@@ -148,9 +148,14 @@ local function author_inline_generator (get_mark)
       author_marks[#author_marks + 1] = get_mark 'corresponding_author'
     end
     -- modified by @kapsner
-    local res = List.clone(author.name.literal)
-    res[#res + 1] = pandoc.Superscript(intercalate(author_marks, {pandoc.Str ','}))
-    return res
+    if FORMAT:match 'latex' then
+      author.name.literal[#author.name.literal + 1] = pandoc.Superscript(intercalate(author_marks, {pandoc.Str ','}))
+      return author
+    else
+      local res = List.clone(author.name.literal)
+      res[#res + 1] = pandoc.Superscript(intercalate(author_marks, {pandoc.Str ','}))
+      return res
+    end
   end
 end
 M.author_inline_generator = author_inline_generator

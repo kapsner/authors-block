@@ -61,5 +61,7 @@ filters:
 
 format:
   docx: default
+  pdf:
+    keep-tex: true
 ---
 ```

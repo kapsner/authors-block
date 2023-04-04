@@ -22,6 +22,7 @@ local List = require 'pandoc.List'
 local from_utils = require "utils"
 local normalize_affiliations = from_utils.normalize_affiliations
 local normalize_authors = from_utils.normalize_authors
+local normalize_latex_authors = from_utils.normalize_latex_authors
 
 local from_authors = require "from_author_info_blocks"
 local default_marks = from_authors.default_marks
@@ -52,14 +53,11 @@ function Pandoc(doc)
   meta.affiliations = normalize_affiliations(meta.affiliations)
   meta.author = meta.authors:map(normalize_authors(meta.affiliations))
   
-   -- Overwrite authors with formatted values. We use a single, formatted
+  -- Overwrite authors with formatted values. We use a single, formatted
   -- string for most formats. LaTeX output, however, looks nicer if we
   -- provide a authors as a list.
-  meta.author = FORMAT:match 'latex'
-    and pandoc.MetaList(meta.author):map(author_inline_generator(mark))
-    or pandoc.MetaInlines(create_authors_inlines(meta.author, mark))
+  meta.author = pandoc.MetaInlines(create_authors_inlines(meta.author, mark))
   -- Institute info is now baked into the affiliations block.
-  meta.authors = nil
   meta.affiliations = nil
   
   return pandoc.Pandoc(body, meta)
