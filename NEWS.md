@@ -2,6 +2,12 @@
 
 ## Unreleased (2023-04-04)
 
+#### Bug fixes
+
+-   providing fix regarding disappeard authors in pdf and quarto &gt;
+    1.3
+    ([8367def](https://github.com/kapsner/authors-block/tree/8367defbd0f32a2d0fde8d03ff20ea641c114a89))
+
 #### Refactorings
 
 -   modularized code
@@ -34,6 +40,12 @@
 
 #### Other changes
 
+-   fixed typo
+    ([38a7d3d](https://github.com/kapsner/authors-block/tree/38a7d3d20fef52f086c0205e5606dbd7bcb76196))
+-   incremented version to 0.2.0
+    ([f9f798a](https://github.com/kapsner/authors-block/tree/f9f798a0e5211d86455a93b17b6bf797b3b1d533))
+-   update news.md
+    ([c5105b1](https://github.com/kapsner/authors-block/tree/c5105b136b919e3012fda9f34cf8afec15fb4310))
 -   udpated readme
     ([a44cde1](https://github.com/kapsner/authors-block/tree/a44cde1512232ab52aa52dfae96c2b5c2e0b4f5f))
 -   updated news.md
@@ -54,7 +66,7 @@
     ([997e605](https://github.com/kapsner/authors-block/tree/997e605ecea203fb391de1684147fbfa5fa1944c))
 
 Full set of changes:
-[`v0.1.0...a44cde1`](https://github.com/kapsner/authors-block/compare/v0.1.0...a44cde1)
+[`v0.1.0...38a7d3d`](https://github.com/kapsner/authors-block/compare/v0.1.0...38a7d3d)
 
 ## v0.1.0 (2022-12-15)
 
