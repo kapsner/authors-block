@@ -1,6 +1,6 @@
 # Authors-block NEWS
 
-## Unreleased (2023-01-01)
+## Unreleased (2023-04-04)
 
 #### Refactorings
 
@@ -27,8 +27,17 @@
 -   installing quarto in actions
     ([b94c361](https://github.com/kapsner/authors-block/tree/b94c36116a971206cf274b590a5049073a1a73f0))
 
+#### Docs
+
+-   updated readme
+    ([b0dc597](https://github.com/kapsner/authors-block/tree/b0dc597bb580c9f09d6c3a8a3a909ec8ccf01683))
+
 #### Other changes
 
+-   udpated readme
+    ([a44cde1](https://github.com/kapsner/authors-block/tree/a44cde1512232ab52aa52dfae96c2b5c2e0b4f5f))
+-   updated news.md
+    ([7bdfc11](https://github.com/kapsner/authors-block/tree/7bdfc11fd14e95194e5b84b1bb568f764509c9e9))
 -   added mit license, updated copyright statements
     ([9c77a5e](https://github.com/kapsner/authors-block/tree/9c77a5e6a5e557894d7e7ede2b9c8b03e3bca918))
 -   udpated news.md
@@ -45,7 +54,7 @@
     ([997e605](https://github.com/kapsner/authors-block/tree/997e605ecea203fb391de1684147fbfa5fa1944c))
 
 Full set of changes:
-[`v0.1.0...9c77a5e`](https://github.com/kapsner/authors-block/compare/v0.1.0...9c77a5e)
+[`v0.1.0...a44cde1`](https://github.com/kapsner/authors-block/compare/v0.1.0...a44cde1)
 
 ## v0.1.0 (2022-12-15)
 
