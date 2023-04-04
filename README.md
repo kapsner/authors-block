@@ -14,7 +14,7 @@ The extension adds some modifications to the code originally provided with the l
 quarto add kapsner/authors-block
 ```
 
-This will install the extension under the `_extensions` subdirectory.
+This will install the extension under the `_extensions` sub-directory.
 If you're using version control, you will want to check in this directory.
 
 ## Using
