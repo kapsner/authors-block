@@ -14,8 +14,14 @@ The extension adds some modifications to the code originally provided with the l
 quarto add kapsner/authors-block
 ```
 
-This will install the extension under the `_extensions` subdirectory.
+This will install the extension under the `_extensions` sub-directory.
 If you're using version control, you will want to check in this directory.
+
+Please note that for compatibility with Quarto version >=1.3 it is required to install
+
+```bash
+quarto add kapsner/authors-block@v0.2.0
+```
 
 ## Using
 
@@ -61,5 +67,6 @@ filters:
 
 format:
   docx: default
+  pdf: default
 ---
 ```
