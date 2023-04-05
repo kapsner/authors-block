@@ -1,6 +1,13 @@
 # Authors-block NEWS
 
-## Unreleased (2023-04-04)
+## Unreleased (2023-04-05)
+
+#### Other changes
+
+-   merged main into development
+    ([4f82bba](https://github.com/kapsner/authors-block/tree/4f82bbab8b06a17c7f0f39e0b68a5f2a56ba1ac6))
+
+## v0.1.1 (2023-04-05)
 
 #### Bug fixes
 
@@ -40,6 +47,12 @@
 
 #### Other changes
 
+-   increment version to 0.1.1
+    ([c2bbc43](https://github.com/kapsner/authors-block/tree/c2bbc43fe74735af0a6c40c36e8c9e19ceb1a567))
+-   updated readme with note on quarto 1.3
+    ([854826b](https://github.com/kapsner/authors-block/tree/854826bc2cb7ca3bb944ff63d61d4333947ee75d))
+-   updated news.md
+    ([77a9472](https://github.com/kapsner/authors-block/tree/77a94724b8e61d31eb95603bbfb79dd82847d279))
 -   fixed typo
     ([38a7d3d](https://github.com/kapsner/authors-block/tree/38a7d3d20fef52f086c0205e5606dbd7bcb76196))
 -   incremented version to 0.2.0
@@ -66,7 +79,7 @@
     ([997e605](https://github.com/kapsner/authors-block/tree/997e605ecea203fb391de1684147fbfa5fa1944c))
 
 Full set of changes:
-[`v0.1.0...38a7d3d`](https://github.com/kapsner/authors-block/compare/v0.1.0...38a7d3d)
+[`v0.1.0...v0.1.1`](https://github.com/kapsner/authors-block/compare/v0.1.0...v0.1.1)
 
 ## v0.1.0 (2022-12-15)
 
