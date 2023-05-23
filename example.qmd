@@ -32,7 +32,8 @@ filters:
 format:
   #native: default
   docx: default
-  pdf: default
+  pdf:
+    keep-tex: true
 ---
 
 ## Brings Quarto's Standardized Authors- & Affiliations-Block to docx-Documents

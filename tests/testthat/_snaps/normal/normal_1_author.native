@@ -7,6 +7,7 @@ Pandoc
                 [ MetaMap
                     (fromList
                        [ ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -36,6 +37,7 @@ Pandoc
                 , MetaMap
                     (fromList
                        [ ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -86,6 +88,7 @@ Pandoc
                          , MetaInlines [ Str "john.doe@jdct.edu" ]
                          )
                        , ( "id" , MetaString "1" )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -109,7 +112,6 @@ Pandoc
                        ])
                 ]
             )
-          , ( "biblio-config" , MetaBool True )
           , ( "by-affiliation"
             , MetaList
                 [ MetaMap
@@ -143,6 +145,7 @@ Pandoc
                                           [ Str "john.doe@jdct.edu" ]
                                       )
                                     , ( "id" , MetaString "1" )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -175,6 +178,7 @@ Pandoc
                              ]
                          )
                        , ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -205,6 +209,7 @@ Pandoc
                     (fromList
                        [ ( "authors" , MetaMap (fromList []) )
                        , ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -240,6 +245,7 @@ Pandoc
                                     [ ( "id"
                                       , MetaInlines [ Str "jdct" ]
                                       )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -282,6 +288,7 @@ Pandoc
                          , MetaInlines [ Str "john.doe@jdct.edu" ]
                          )
                        , ( "id" , MetaString "1" )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -304,22 +311,6 @@ Pandoc
                          )
                        ])
                 ]
-            )
-          , ( "labels"
-            , MetaMap
-                (fromList
-                   [ ( "abstract" , MetaInlines [ Str "Abstract" ] )
-                   , ( "affiliations"
-                     , MetaInlines [ Str "Affiliations" ]
-                     )
-                   , ( "authors" , MetaInlines [ Str "Author" ] )
-                   , ( "description"
-                     , MetaInlines [ Str "Description" ]
-                     )
-                   , ( "doi" , MetaInlines [ Str "Doi" ] )
-                   , ( "modified" , MetaInlines [ Str "Modified" ] )
-                   , ( "published" , MetaInlines [ Str "Published" ] )
-                   ])
             )
           , ( "title"
             , MetaInlines

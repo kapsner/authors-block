@@ -40,7 +40,6 @@ local function normalize_affiliations(affiliations)
 end
 M.normalize_affiliations = normalize_affiliations
 
-
 -- from https://stackoverflow.com/a/2282547
 local function has_key(set, key)
   return set[key] ~= nil

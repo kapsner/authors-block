@@ -1,6 +1,39 @@
 # Authors-block NEWS
 
-## Unreleased (2023-04-04)
+## Unreleased (2023-05-23)
+
+#### Tests
+
+-   fixed unit test snapshots to comply with new quarto.native output
+    ([d840b79](https://github.com/kapsner/authors-block/tree/d840b7933e86c31f69acd7e2645d1374c77784b6))
+
+#### Other changes
+
+-   updated news.md
+    ([743b06b](https://github.com/kapsner/authors-block/tree/743b06bc86011a2f7cddd159dce1ddf01646c1f6))
+
+Full set of changes:
+[`v0.2.0...743b06b`](https://github.com/kapsner/authors-block/compare/v0.2.0...743b06b)
+
+## v0.2.0 (2023-04-05)
+
+#### Other changes
+
+-   updated news.md
+    ([c70af4a](https://github.com/kapsner/authors-block/tree/c70af4a0c91943548f08942407246e494ba11f50))
+-   merged main into development
+    ([4f82bba](https://github.com/kapsner/authors-block/tree/4f82bbab8b06a17c7f0f39e0b68a5f2a56ba1ac6))
+
+Full set of changes:
+[`v0.1.1...v0.2.0`](https://github.com/kapsner/authors-block/compare/v0.1.1...v0.2.0)
+
+## v0.1.1 (2023-04-05)
+
+#### Bug fixes
+
+-   providing fix regarding disappeard authors in pdf and quarto &gt;
+    1.3
+    ([8367def](https://github.com/kapsner/authors-block/tree/8367defbd0f32a2d0fde8d03ff20ea641c114a89))
 
 #### Refactorings
 
@@ -34,6 +67,18 @@
 
 #### Other changes
 
+-   increment version to 0.1.1
+    ([c2bbc43](https://github.com/kapsner/authors-block/tree/c2bbc43fe74735af0a6c40c36e8c9e19ceb1a567))
+-   updated readme with note on quarto 1.3
+    ([854826b](https://github.com/kapsner/authors-block/tree/854826bc2cb7ca3bb944ff63d61d4333947ee75d))
+-   updated news.md
+    ([77a9472](https://github.com/kapsner/authors-block/tree/77a94724b8e61d31eb95603bbfb79dd82847d279))
+-   fixed typo
+    ([38a7d3d](https://github.com/kapsner/authors-block/tree/38a7d3d20fef52f086c0205e5606dbd7bcb76196))
+-   incremented version to 0.2.0
+    ([f9f798a](https://github.com/kapsner/authors-block/tree/f9f798a0e5211d86455a93b17b6bf797b3b1d533))
+-   update news.md
+    ([c5105b1](https://github.com/kapsner/authors-block/tree/c5105b136b919e3012fda9f34cf8afec15fb4310))
 -   udpated readme
     ([a44cde1](https://github.com/kapsner/authors-block/tree/a44cde1512232ab52aa52dfae96c2b5c2e0b4f5f))
 -   updated news.md
@@ -54,7 +99,7 @@
     ([997e605](https://github.com/kapsner/authors-block/tree/997e605ecea203fb391de1684147fbfa5fa1944c))
 
 Full set of changes:
-[`v0.1.0...a44cde1`](https://github.com/kapsner/authors-block/compare/v0.1.0...a44cde1)
+[`v0.1.0...v0.1.1`](https://github.com/kapsner/authors-block/compare/v0.1.0...v0.1.1)
 
 ## v0.1.0 (2022-12-15)
 
