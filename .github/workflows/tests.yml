@@ -12,7 +12,7 @@ jobs:
   all:
     runs-on: ${{ matrix.config.os }}
 
-    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+    name: ${{ matrix.config.os }} (${{ matrix.config.quarto }})
 
     strategy:
       fail-fast: false
@@ -22,7 +22,7 @@ jobs:
           - { os: windows-latest, r: "release", quarto: "" }
           - { os: macOS-latest, r: "release", quarto: "" }
           - { os: ubuntu-latest, r: "release", quarto: "" }
-          - { os: ubuntu-dev, r: "release", quarto: "pre-release" }
+          - { os: ubuntu-latest, r: "release", quarto: "pre-release" }
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
