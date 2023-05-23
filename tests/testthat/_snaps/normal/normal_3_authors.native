@@ -7,6 +7,7 @@ Pandoc
                 [ MetaMap
                     (fromList
                        [ ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -36,6 +37,7 @@ Pandoc
                 , MetaMap
                     (fromList
                        [ ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -89,6 +91,7 @@ Pandoc
                          , MetaInlines [ Str "john.doe@jdct.edu" ]
                          )
                        , ( "id" , MetaString "1" )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -123,6 +126,7 @@ Pandoc
                              ]
                          )
                        , ( "id" , MetaString "2" )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -171,6 +175,7 @@ Pandoc
                                 ])
                          )
                        , ( "id" , MetaString "3" )
+                       , ( "letter" , MetaString "c" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -194,7 +199,6 @@ Pandoc
                        ])
                 ]
             )
-          , ( "biblio-config" , MetaBool True )
           , ( "by-affiliation"
             , MetaList
                 [ MetaMap
@@ -232,6 +236,7 @@ Pandoc
                                           [ Str "john.doe@jdct.edu" ]
                                       )
                                     , ( "id" , MetaString "1" )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -275,6 +280,7 @@ Pandoc
                                           ]
                                       )
                                     , ( "id" , MetaString "2" )
+                                    , ( "letter" , MetaString "b" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -334,6 +340,7 @@ Pandoc
                                              ])
                                       )
                                     , ( "id" , MetaString "3" )
+                                    , ( "letter" , MetaString "c" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -366,6 +373,7 @@ Pandoc
                              ]
                          )
                        , ( "id" , MetaInlines [ Str "jdct" ] )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -426,6 +434,7 @@ Pandoc
                                              ])
                                       )
                                     , ( "id" , MetaString "3" )
+                                    , ( "letter" , MetaString "c" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -458,6 +467,7 @@ Pandoc
                              ]
                          )
                        , ( "id" , MetaInlines [ Str "iot" ] )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaInlines
@@ -493,6 +503,7 @@ Pandoc
                                     [ ( "id"
                                       , MetaInlines [ Str "jdct" ]
                                       )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -538,6 +549,7 @@ Pandoc
                          , MetaInlines [ Str "john.doe@jdct.edu" ]
                          )
                        , ( "id" , MetaString "1" )
+                       , ( "letter" , MetaString "a" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -568,6 +580,7 @@ Pandoc
                                     [ ( "id"
                                       , MetaInlines [ Str "jdct" ]
                                       )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -599,6 +612,7 @@ Pandoc
                              ]
                          )
                        , ( "id" , MetaString "2" )
+                       , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -629,6 +643,7 @@ Pandoc
                                     [ ( "id"
                                       , MetaInlines [ Str "jdct" ]
                                       )
+                                    , ( "letter" , MetaString "a" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -662,6 +677,7 @@ Pandoc
                                     [ ( "id"
                                       , MetaInlines [ Str "iot" ]
                                       )
+                                    , ( "letter" , MetaString "b" )
                                     , ( "metadata"
                                       , MetaMap (fromList [])
                                       )
@@ -697,6 +713,7 @@ Pandoc
                                 ])
                          )
                        , ( "id" , MetaString "3" )
+                       , ( "letter" , MetaString "c" )
                        , ( "metadata" , MetaMap (fromList []) )
                        , ( "name"
                          , MetaMap
@@ -719,22 +736,6 @@ Pandoc
                          )
                        ])
                 ]
-            )
-          , ( "labels"
-            , MetaMap
-                (fromList
-                   [ ( "abstract" , MetaInlines [ Str "Abstract" ] )
-                   , ( "affiliations"
-                     , MetaInlines [ Str "Affiliations" ]
-                     )
-                   , ( "authors" , MetaInlines [ Str "Authors" ] )
-                   , ( "description"
-                     , MetaInlines [ Str "Description" ]
-                     )
-                   , ( "doi" , MetaInlines [ Str "Doi" ] )
-                   , ( "modified" , MetaInlines [ Str "Modified" ] )
-                   , ( "published" , MetaInlines [ Str "Published" ] )
-                   ])
             )
           , ( "title"
             , MetaInlines
