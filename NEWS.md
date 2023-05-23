@@ -1,11 +1,23 @@
 # Authors-block NEWS
 
-## Unreleased (2023-04-05)
+## Unreleased (2023-05-23)
+
+#### Tests
+
+-   fixed unit test snapshots to comply with new quarto.native output
+    ([d840b79](https://github.com/kapsner/authors-block/tree/d840b7933e86c31f69acd7e2645d1374c77784b6))
+
+## v0.2.0 (2023-04-05)
 
 #### Other changes
 
+-   updated news.md
+    ([c70af4a](https://github.com/kapsner/authors-block/tree/c70af4a0c91943548f08942407246e494ba11f50))
 -   merged main into development
     ([4f82bba](https://github.com/kapsner/authors-block/tree/4f82bbab8b06a17c7f0f39e0b68a5f2a56ba1ac6))
+
+Full set of changes:
+[`v0.1.1...v0.2.0`](https://github.com/kapsner/authors-block/compare/v0.1.1...v0.2.0)
 
 ## v0.1.1 (2023-04-05)
 
