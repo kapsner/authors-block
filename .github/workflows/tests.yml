@@ -19,10 +19,10 @@ jobs:
       matrix:
         config:
           # use a different tic template type if you do not want to build on all listed platforms
-          - { os: windows-latest, r: "release", quarto: "release" }
-          - { os: macOS-latest, r: "release", quarto: "release" }
-          - { os: ubuntu-latest, r: "release", quarto: "release" }
-          - { os: ubuntu-latest, r: "release", quarto: "pre-release" }
+          - { os: windows-latest, r: "release", quarto: "latest" }
+          - { os: macOS-latest, r: "release", quarto: "latest" }
+          - { os: ubuntu-latest, r: "release", quarto: "latest" }
+          - { os: ubuntu-dev, r: "release", quarto: "pre-release" }
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
