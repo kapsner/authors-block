@@ -7,6 +7,14 @@
 -   fixed unit test snapshots to comply with new quarto.native output
     ([d840b79](https://github.com/kapsner/authors-block/tree/d840b7933e86c31f69acd7e2645d1374c77784b6))
 
+#### Other changes
+
+-   updated news.md
+    ([743b06b](https://github.com/kapsner/authors-block/tree/743b06bc86011a2f7cddd159dce1ddf01646c1f6))
+
+Full set of changes:
+[`v0.2.0...743b06b`](https://github.com/kapsner/authors-block/compare/v0.2.0...743b06b)
+
 ## v0.2.0 (2023-04-05)
 
 #### Other changes
