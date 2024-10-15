@@ -1,6 +1,40 @@
+
+
 # Authors-block NEWS
 
-## Unreleased (2023-05-23)
+## Unreleased (2024-10-15)
+
+#### Bug fixes
+
+-   remove comma between two authors
+    ([87420c7](https://github.com/kapsner/authors-block/tree/87420c779a29853857dfa98fa544add9356d6676))
+
+#### Tests
+
+-   updated gha 3, support for mac
+    ([da47a52](https://github.com/kapsner/authors-block/tree/da47a5261d901b2cabb7f64258246d63cc34e489))
+-   updated gha 2
+    ([a70624a](https://github.com/kapsner/authors-block/tree/a70624acacf27a02a25a032911602c7b1b122652))
+-   updated gha
+    ([9f6addc](https://github.com/kapsner/authors-block/tree/9f6addc9fd739f7c59cd3be83d401c659f57de70))
+-   updated unit test matrix
+    ([82c8663](https://github.com/kapsner/authors-block/tree/82c8663b5646f9a2c5b91e279a81b9ea235ca907))
+-   try empty value for quarto version
+    ([1ed8052](https://github.com/kapsner/authors-block/tree/1ed8052a6720855729746929de81101fdcce3d9f))
+-   fixed unit tests
+    ([f4870de](https://github.com/kapsner/authors-block/tree/f4870def48ea1ab7ba31fd96c87633a810316fa8))
+-   added tests for quarto pre-release
+    ([34aee8c](https://github.com/kapsner/authors-block/tree/34aee8c30f69e2ca22cc32bbed82016a472d04cc))
+
+#### Other changes
+
+-   updated readme.md
+    ([084668b](https://github.com/kapsner/authors-block/tree/084668ba8ceaa7c1c6575b3c2cb2b7fbf090524e))
+
+Full set of changes:
+[`v0.2.1...da47a52`](https://github.com/kapsner/authors-block/compare/v0.2.1...da47a52)
+
+## v0.2.1 (2023-05-23)
 
 #### Tests
 
@@ -9,11 +43,15 @@
 
 #### Other changes
 
+-   bump to version 0.2.1
+    ([7944a86](https://github.com/kapsner/authors-block/tree/7944a8623b10ae2926c40486a83920b700d4237c))
+-   updated news.md
+    ([ec6dbeb](https://github.com/kapsner/authors-block/tree/ec6dbeb89dca32f6b7d8365caed745e21feab3e8))
 -   updated news.md
     ([743b06b](https://github.com/kapsner/authors-block/tree/743b06bc86011a2f7cddd159dce1ddf01646c1f6))
 
 Full set of changes:
-[`v0.2.0...743b06b`](https://github.com/kapsner/authors-block/compare/v0.2.0...743b06b)
+[`v0.2.0...v0.2.1`](https://github.com/kapsner/authors-block/compare/v0.2.0...v0.2.1)
 
 ## v0.2.0 (2023-04-05)
 
@@ -31,8 +69,7 @@ Full set of changes:
 
 #### Bug fixes
 
--   providing fix regarding disappeard authors in pdf and quarto &gt;
-    1.3
+-   providing fix regarding disappeard authors in pdf and quarto \> 1.3
     ([8367def](https://github.com/kapsner/authors-block/tree/8367defbd0f32a2d0fde8d03ff20ea641c114a89))
 
 #### Refactorings
