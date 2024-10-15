@@ -19,9 +19,9 @@ jobs:
       matrix:
         config:
           # use a different tic template type if you do not want to build on all listed platforms
-          - { os: windows-latest, r: "release", quarto: "" }
-          - { os: macOS-latest, r: "release", quarto: "" }
-          - { os: ubuntu-latest, r: "release", quarto: "" }
+          - { os: windows-latest, r: "release", quarto: "release" }
+          - { os: macOS-latest, r: "release", quarto: "release" }
+          - { os: ubuntu-latest, r: "release", quarto: "release" }
           - { os: ubuntu-latest, r: "release", quarto: "pre-release" }
 
     env:
