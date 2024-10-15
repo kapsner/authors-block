@@ -11,6 +11,8 @@
 
 #### Tests
 
+-   updated gha 4, support for mac
+    ([bcf3027](https://github.com/kapsner/authors-block/tree/bcf30277644c8110b348b9ad69dca267502a3757))
 -   updated gha 3, support for mac
     ([da47a52](https://github.com/kapsner/authors-block/tree/da47a5261d901b2cabb7f64258246d63cc34e489))
 -   updated gha 2
@@ -28,11 +30,13 @@
 
 #### Other changes
 
+-   updated news.md
+    ([44c7470](https://github.com/kapsner/authors-block/tree/44c74706e182212e32293a12b776afc5b9986bc9))
 -   updated readme.md
     ([084668b](https://github.com/kapsner/authors-block/tree/084668ba8ceaa7c1c6575b3c2cb2b7fbf090524e))
 
 Full set of changes:
-[`v0.2.1...da47a52`](https://github.com/kapsner/authors-block/compare/v0.2.1...da47a52)
+[`v0.2.1...17bb705`](https://github.com/kapsner/authors-block/compare/v0.2.1...17bb705)
 
 ## v0.2.1 (2023-05-23)
 
