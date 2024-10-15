@@ -171,7 +171,11 @@ local function create_authors_inlines(authors, mark)
   inlines[#inlines] = nil
   local result = intercalate(inlines, {pandoc.Str ',', pandoc.Space()})
   if #authors > 1 then
-    result:extend(List:new{pandoc.Str ","} .. and_str)
+    if #authors == 2 then
+      result:extend(and_str)
+    else 
+      result:extend(List:new{pandoc.Str ","} .. and_str)
+    end
   end
   result:extend(last_author)
   return result
