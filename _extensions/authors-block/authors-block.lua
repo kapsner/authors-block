@@ -38,18 +38,25 @@ local create_authors_inlines = from_authors.create_authors_inlines
 function Pandoc(doc)
   local meta = doc.meta
   local body = List:new{}
-  
+
+  -- Support both `authors:` and `author:` YAML keys; skip if no valid author list
+  local authors = meta.authors or meta.author
+  if authors == nil or authors[1] == nil or authors[1].name == nil then
+    return doc
+  end
+  meta.authors = List:new(authors)
+
   local mark = function (mark_name) return default_marks[mark_name] end
 
   body:extend(create_equal_contributors_block(meta.authors, mark) or {})
   body:extend(create_affiliations_blocks(meta.affiliations) or {})
   body:extend(create_correspondence_blocks(meta.authors, mark) or {})
   body:extend(doc.blocks)
-  
+
   for _i, author in ipairs(meta.authors) do
     author.test = is_corresponding_author(author)
   end
-  
+
   meta.affiliations = normalize_affiliations(meta.affiliations)
   meta.author = meta.authors:map(normalize_authors(meta.affiliations))
   
