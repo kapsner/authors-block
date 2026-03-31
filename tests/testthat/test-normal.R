@@ -37,13 +37,15 @@ filters:
 ---
     '
     fn_in <- file.path(tempdir(), "normal_3_authors.qmd")
-    fn_out <- file.path(tempdir(), "normal_3_authors.native")
+    fn_out <- file.path(tempdir(), "normal_3_authors.md")
     writeLines(text = yml_header, con = fn_in)
     quarto::quarto_render(
       input = fn_in,
-      output_format = "native"
+      output_format = "markdown"
     )
-    expect_snapshot_file(fn_out)
+    yaml_in <- yaml::read_yaml(fn_out)
+    yaml_in$engines <- NULL
+    expect_snapshot_output(yaml_in)
   }
 )
 
@@ -80,13 +82,15 @@ filters:
 ---
     '
     fn_in <- file.path(tempdir(), "normal_2_authors.qmd")
-    fn_out <- file.path(tempdir(), "normal_2_authors.native")
+    fn_out <- file.path(tempdir(), "normal_2_authors.md")
     writeLines(text = yml_header, con = fn_in)
     quarto::quarto_render(
       input = fn_in,
-      output_format = "native"
+      output_format = "markdown"
     )
-    expect_snapshot_file(fn_out)
+    yaml_in <- yaml::read_yaml(fn_out)
+    yaml_in$engines <- NULL
+    expect_snapshot_output(yaml_in)
   }
 )
 
@@ -119,12 +123,14 @@ filters:
 ---
     '
     fn_in <- file.path(tempdir(), "normal_1_author.qmd")
-    fn_out <- file.path(tempdir(), "normal_1_author.native")
+    fn_out <- file.path(tempdir(), "normal_1_author.md")
     writeLines(text = yml_header, con = fn_in)
     quarto::quarto_render(
       input = fn_in,
-      output_format = "native"
+      output_format = "markdown"
     )
-    expect_snapshot_file(fn_out)
+    yaml_in <- yaml::read_yaml(fn_out)
+    yaml_in$engines <- NULL
+    expect_snapshot_output(yaml_in)
   }
 )
