@@ -737,6 +737,19 @@ Pandoc
                        ])
                 ]
             )
+          , ( "engines"
+            , MetaList
+                [ MetaMap
+                    (fromList
+                       [ ( "path"
+                         , MetaInlines
+                             [ Str
+                                 "/opt/quarto/1.9.35/share/extension-subtrees/julia-engine/_extensions/julia-engine/julia-engine.js"
+                             ]
+                         )
+                       ])
+                ]
+            )
           , ( "title"
             , MetaInlines
                 [ Str "Authors-block" , Space , Str "Example" ]

@@ -110,6 +110,47 @@ Pandoc
                          , MetaInlines [ Str "0000-1111-2222-3333" ]
                          )
                        ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "ref"
+                                      , MetaInlines [ Str "iot" ]
+                                      )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaString "2" )
+                       , ( "letter" , MetaString "b" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "Jane" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "Jane" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "2" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-2222-1111-3333" ]
+                         )
+                       ])
                 ]
             )
           , ( "by-affiliation"
@@ -175,6 +216,57 @@ Pandoc
                                           [ Str "0000-1111-2222-3333" ]
                                       )
                                     ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          , MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "iot" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "id" , MetaString "2" )
+                                    , ( "letter" , MetaString "b" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Roe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "Jane" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "Jane"
+                                                   , Space
+                                                   , Str "Roe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "2" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-2222-1111-3333" ]
+                                      )
+                                    ])
                              ]
                          )
                        , ( "id" , MetaInlines [ Str "jdct" ] )
@@ -207,7 +299,61 @@ Pandoc
                        ])
                 , MetaMap
                     (fromList
-                       [ ( "authors" , MetaMap (fromList []) )
+                       [ ( "authors"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "affiliations"
+                                      , MetaList
+                                          [ MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "jdct" ]
+                                                   )
+                                                 ])
+                                          , MetaMap
+                                              (fromList
+                                                 [ ( "ref"
+                                                   , MetaInlines
+                                                       [ Str "iot" ]
+                                                   )
+                                                 ])
+                                          ]
+                                      )
+                                    , ( "id" , MetaString "2" )
+                                    , ( "letter" , MetaString "b" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaMap
+                                          (fromList
+                                             [ ( "family"
+                                               , MetaInlines
+                                                   [ Str "Roe" ]
+                                               )
+                                             , ( "given"
+                                               , MetaInlines
+                                                   [ Str "Jane" ]
+                                               )
+                                             , ( "literal"
+                                               , MetaInlines
+                                                   [ Str "Jane"
+                                                   , Space
+                                                   , Str "Roe"
+                                                   ]
+                                               )
+                                             ])
+                                      )
+                                    , ( "number" , MetaString "2" )
+                                    , ( "orcid"
+                                      , MetaInlines
+                                          [ Str "0000-2222-1111-3333" ]
+                                      )
+                                    ])
+                             ]
+                         )
                        , ( "id" , MetaInlines [ Str "iot" ] )
                        , ( "letter" , MetaString "b" )
                        , ( "metadata" , MetaMap (fromList []) )
@@ -308,6 +454,99 @@ Pandoc
                        , ( "number" , MetaString "1" )
                        , ( "orcid"
                          , MetaInlines [ Str "0000-1111-2222-3333" ]
+                         )
+                       ])
+                , MetaMap
+                    (fromList
+                       [ ( "affiliations"
+                         , MetaList
+                             [ MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "jdct" ]
+                                      )
+                                    , ( "letter" , MetaString "a" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "Center"
+                                          , Space
+                                          , Str "for"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "1" )
+                                    ])
+                             , MetaMap
+                                 (fromList
+                                    [ ( "id"
+                                      , MetaInlines [ Str "iot" ]
+                                      )
+                                    , ( "letter" , MetaString "b" )
+                                    , ( "metadata"
+                                      , MetaMap (fromList [])
+                                      )
+                                    , ( "name"
+                                      , MetaInlines
+                                          [ Str "Institute"
+                                          , Space
+                                          , Str "of"
+                                          , Space
+                                          , Str "Technology,"
+                                          , Space
+                                          , Str "John"
+                                          , Space
+                                          , Str "Doe"
+                                          , Space
+                                          , Str "University,"
+                                          , Space
+                                          , Str "Doetown,"
+                                          , Space
+                                          , Str "Germany."
+                                          ]
+                                      )
+                                    , ( "number" , MetaString "2" )
+                                    ])
+                             ]
+                         )
+                       , ( "id" , MetaString "2" )
+                       , ( "letter" , MetaString "b" )
+                       , ( "metadata" , MetaMap (fromList []) )
+                       , ( "name"
+                         , MetaMap
+                             (fromList
+                                [ ( "family"
+                                  , MetaInlines [ Str "Roe" ]
+                                  )
+                                , ( "given"
+                                  , MetaInlines [ Str "Jane" ]
+                                  )
+                                , ( "literal"
+                                  , MetaInlines
+                                      [ Str "Jane" , Space , Str "Roe" ]
+                                  )
+                                ])
+                         )
+                       , ( "number" , MetaString "2" )
+                       , ( "orcid"
+                         , MetaInlines [ Str "0000-2222-1111-3333" ]
                          )
                        ])
                 ]
