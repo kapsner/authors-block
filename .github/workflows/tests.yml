@@ -1,6 +1,11 @@
 on:
   push:
+    branches:
+    - main
+    - development
   pull_request:
+    branches:
+    - main
   # for now, CRON jobs only run on the default branch of the repo (i.e. usually on master)
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -84,5 +89,5 @@ jobs:
         shell: Rscript {0}
 
       - name: Test
-        run: testthat::test_dir(path = "tests/testthat")
+        run: testthat::test_dir(path = "tests/testthat", reporter = "summary")
         shell: Rscript {0}
