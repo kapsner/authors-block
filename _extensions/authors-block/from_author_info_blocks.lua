@@ -185,16 +185,15 @@ M.create_authors_inlines = create_authors_inlines
 -- taken from https://github.com/pandoc/lua-filters/blob/1660794b991c3553968beb993f5aabb99b317584/author-info-blocks/author-info-blocks.lua
 --- Generate a block list all affiliations, marked with arabic numbers.
 local function create_affiliations_blocks(affiliations)
-  local affil_lines = List:new(affiliations):map(
-    function (affil, i)
+  return List:new(affiliations):map(
+    function (affil)
       local num_inlines = List:new{
         pandoc.Superscript{pandoc.Str(affil.number)},
         pandoc.Space()
       }
-      return num_inlines .. affil.name
+      return pandoc.Para(num_inlines .. affil.name)
     end
   )
-  return {pandoc.Para(intercalate(affil_lines, {pandoc.LineBreak()}))}
 end
 M.create_affiliations_blocks = create_affiliations_blocks
 
